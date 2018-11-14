@@ -1,0 +1,389 @@
+﻿<UserControl x:Class="fingerPrint_Manag.Views.AdministratorHomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:fingerPrint_Manag.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="517" d:DesignWidth="1190">
+
+    <UserControl.Resources>
+        <VisualBrush x:Key="buttonBrush" Visual="{Binding ElementName=button}"/>
+    </UserControl.Resources>
+    <Frame Name="AdministratorHomeViewFrame" NavigationUIVisibility="Hidden">
+        <Frame.Content>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="185*"/>
+                    <ColumnDefinition Width="821*"/>
+                    <ColumnDefinition Width="185*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="363*"/>
+                    <RowDefinition Height="164*"/>
+                </Grid.RowDefinitions>
+                
+                <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Height="1.5" VerticalAlignment="Top" Background="#FF293955" />
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="94*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="93*"/>
+
+                    </Grid.RowDefinitions>
+
+
+                    <!--#region DEFINIG THE 3D MODEL-->
+
+                    <!--the grid News-->
+                    <Grid  Grid.Column="1" Grid.Row="2" Margin="0,0,0,0.001">
+                        <Border>
+                            <Viewport3D>
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0,0" LookDirection="0,0,-1" FieldOfView="35"/>
+                                </Viewport3D.Camera>
+
+                                <!--properties children-->
+                                <Viewport3D.Children>
+                                    <ModelVisual3D>
+                                        <ModelVisual3D.Content>
+                                            <DirectionalLight Color="#FFE8E8EC" Direction="0,0,-1"/>
+                                        </ModelVisual3D.Content>
+                                    </ModelVisual3D>
+
+                                    <!--definig the visual view-->
+                                    <Viewport2DVisual3D>
+                                        <Viewport2DVisual3D.Geometry>
+                                            <MeshGeometry3D>
+                                                <MeshGeometry3D.Positions>-4,3,-18 4,2,-18 4,-2,-18, -4,-3,-18</MeshGeometry3D.Positions>
+                                                <MeshGeometry3D.TriangleIndices>2,1,0 0,3,2</MeshGeometry3D.TriangleIndices>
+                                                <MeshGeometry3D.TextureCoordinates>0,0 1,0 1,1 0,0</MeshGeometry3D.TextureCoordinates>
+                                            </MeshGeometry3D>
+                                        </Viewport2DVisual3D.Geometry>
+
+                                        <!--defining the material-->
+                                        <Viewport2DVisual3D.Material>
+                                            <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True" Brush="White"/>
+                                        </Viewport2DVisual3D.Material>
+
+                                        <!--defining the transformation-->
+                                        <Viewport2DVisual3D.Transform>
+                                            <RotateTransform3D CenterZ="-18">
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D Angle="45" Axis="0,1,0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                        </Viewport2DVisual3D.Transform>
+                                        <!--definig the rectangle-->
+                                        <Viewport2DVisual3D.Visual>
+                                            <Button Content=""/>
+                                        </Viewport2DVisual3D.Visual>
+                                    </Viewport2DVisual3D>
+                                </Viewport3D.Children>
+                            </Viewport3D>
+                        </Border>
+                        <Image  Margin="115.035,54,124.047,59" Cursor="Hand" Source="Coins-128.png" />
+                    </Grid>
+
+
+                    <!--the grid Statistics-->
+                    <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="1">
+                        <Border x:Name="border"  Grid.Column="1" Grid.Row="1">
+                            <Viewport3D x:Name="viewport3D" RenderTransformOrigin="0.5,0.5">
+                                <Viewport3D.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Viewport3D.RenderTransform>
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0,0" LookDirection="0,0,-1" FieldOfView="35"/>
+                                </Viewport3D.Camera>
+
+                                <!--properties children-->
+                                <Viewport3D.Children>
+                                    <ModelVisual3D>
+                                        <ModelVisual3D.Content>
+                                            <DirectionalLight Color="#FFE8E8EC" Direction="0,0,-1"/>
+                                        </ModelVisual3D.Content>
+                                    </ModelVisual3D>
+
+                                    <!--definig the visual view-->
+                                    <Viewport2DVisual3D>
+                                        <Viewport2DVisual3D.Geometry>
+                                            <MeshGeometry3D>
+                                                <MeshGeometry3D.Positions>-4,3,-18 4,2,-18 4,-2,-18, -4,-3,-18</MeshGeometry3D.Positions>
+                                                <MeshGeometry3D.TriangleIndices>2,1,0 0,3,2</MeshGeometry3D.TriangleIndices>
+                                                <MeshGeometry3D.TextureCoordinates>0,0 1,0 1,1 0,0</MeshGeometry3D.TextureCoordinates>
+                                            </MeshGeometry3D>
+                                        </Viewport2DVisual3D.Geometry>
+
+                                        <!--defining the material-->
+                                        <Viewport2DVisual3D.Material>
+                                            <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True" Brush="White"/>
+                                        </Viewport2DVisual3D.Material>
+
+                                        <!--defining the transformation-->
+                                        <Viewport2DVisual3D.Transform>
+                                            <RotateTransform3D CenterZ="-18">
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D Angle="45" Axis="0,1,-0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                        </Viewport2DVisual3D.Transform>
+                                        <!--definig the rectangle-->
+                                        <Viewport2DVisual3D.Visual>
+                                            <Button Content=""/>
+                                        </Viewport2DVisual3D.Visual>
+                                    </Viewport2DVisual3D>
+                                </Viewport3D.Children>
+                            </Viewport3D>
+
+                        </Border>
+                        <Image x:Name="image" Margin="115.155,60.002,118.282,60.716" Source="126-128.png" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="Statistics_leftButtonDown" Cursor="Hand">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </Grid>
+
+                    <!--the Add member Grid-->
+                    <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="1">
+                        <Border  Grid.Column="1" Grid.Row="1">
+                            <Viewport3D>
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0,0" LookDirection="0,0,-1" FieldOfView="35"/>
+                                </Viewport3D.Camera>
+
+                                <!--properties children-->
+                                <Viewport3D.Children>
+                                    <ModelVisual3D>
+                                        <ModelVisual3D.Content>
+                                            <DirectionalLight Color="#FFE8E8EC" Direction="0,0,-1"/>
+                                        </ModelVisual3D.Content>
+                                    </ModelVisual3D>
+
+                                    <!--definig the visual view-->
+                                    <Viewport2DVisual3D>
+                                        <Viewport2DVisual3D.Geometry>
+                                            <MeshGeometry3D>
+                                                <MeshGeometry3D.Positions>-4,3,-18 4,2,-18 4,-2,-18, -4,-3,-18</MeshGeometry3D.Positions>
+                                                <MeshGeometry3D.TriangleIndices>2,1,0 0,3,2</MeshGeometry3D.TriangleIndices>
+                                                <MeshGeometry3D.TextureCoordinates>0,0 1,0 1,1 0,0</MeshGeometry3D.TextureCoordinates>
+                                            </MeshGeometry3D>
+                                        </Viewport2DVisual3D.Geometry>
+
+                                        <!--defining the material-->
+                                        <Viewport2DVisual3D.Material>
+                                            <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True" Brush="White"/>
+                                        </Viewport2DVisual3D.Material>
+
+                                        <!--defining the transformation-->
+                                        <Viewport2DVisual3D.Transform>
+                                            <RotateTransform3D CenterZ="-18">
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D Angle="45" Axis="0,1,0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                        </Viewport2DVisual3D.Transform>
+                                        <!--definig the rectangle-->
+                                        <Viewport2DVisual3D.Visual>
+                                            <Button Content=""/>
+                                        </Viewport2DVisual3D.Visual>
+                                    </Viewport2DVisual3D>
+                                </Viewport3D.Children>
+                            </Viewport3D>
+
+                        </Border>
+                        <Image Source="add_friend-128.png" Margin="108,53,114,55" MouseLeftButtonDown="addmembers_leftMousebuttonDown" Cursor="Hand"/>
+                    </Grid>
+
+                    <!--search member Grid-->
+                    <Grid Grid.Column="2" Grid.Row="0" Grid.RowSpan="1">
+                        <Border  Grid.Column="1" Grid.Row="1">
+                            <Viewport3D>
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0,0" LookDirection="0,0,-1" FieldOfView="35"/>
+                                </Viewport3D.Camera>
+
+                                <!--properties children-->
+                                <Viewport3D.Children>
+                                    <ModelVisual3D>
+                                        <ModelVisual3D.Content>
+                                            <DirectionalLight Color="#FFE8E8EC" Direction="0,0,-1"/>
+                                        </ModelVisual3D.Content>
+                                    </ModelVisual3D>
+
+                                    <!--definig the visual view-->
+                                    <Viewport2DVisual3D>
+                                        <Viewport2DVisual3D.Geometry>
+                                            <MeshGeometry3D>
+                                                <MeshGeometry3D.Positions>-4,3,-18 4,2,-18 4,-2,-18, -4,-3,-18</MeshGeometry3D.Positions>
+                                                <MeshGeometry3D.TriangleIndices>2,1,0 0,3,2</MeshGeometry3D.TriangleIndices>
+                                                <MeshGeometry3D.TextureCoordinates>0,0 1,0 1,1 0,0</MeshGeometry3D.TextureCoordinates>
+                                            </MeshGeometry3D>
+                                        </Viewport2DVisual3D.Geometry>
+
+                                        <!--defining the material-->
+                                        <Viewport2DVisual3D.Material>
+                                            <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True" Brush="White"/>
+                                        </Viewport2DVisual3D.Material>
+
+                                        <!--defining the transformation-->
+                                        <Viewport2DVisual3D.Transform>
+                                            <RotateTransform3D CenterZ="-18">
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D Angle="45" Axis="0,1,0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                        </Viewport2DVisual3D.Transform>
+                                        <!--definig the rectangle-->
+                                        <Viewport2DVisual3D.Visual>
+                                            <Button Content=""/>
+                                        </Viewport2DVisual3D.Visual>
+                                    </Viewport2DVisual3D>
+                                </Viewport3D.Children>
+                            </Viewport3D>
+
+                        </Border>
+                        <Image Source="43-128.png" Margin="113,57,120.155,65.716" Cursor="Hand" MouseLeftButtonDown="MembersView_mouseleftbuttondown"/>
+                    </Grid>
+
+                    <!--plans grid-->
+                    <Grid Grid.Column="0" Grid.Row="2" Margin="0,0,0,0.001">
+                        <Border  Grid.Column="1" Grid.Row="1">
+                            <Viewport3D>
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0,0" LookDirection="0,0,-1" FieldOfView="35"/>
+                                </Viewport3D.Camera>
+
+                                <!--properties children-->
+                                <Viewport3D.Children>
+                                    <ModelVisual3D>
+                                        <ModelVisual3D.Content>
+                                            <DirectionalLight Color="#FFE8E8EC" Direction="0,0,-1"/>
+                                        </ModelVisual3D.Content>
+                                    </ModelVisual3D>
+
+                                    <!--definig the visual view-->
+                                    <Viewport2DVisual3D>
+                                        <Viewport2DVisual3D.Geometry>
+                                            <MeshGeometry3D>
+                                                <MeshGeometry3D.Positions>-4,3,-18 4,2,-18 4,-2,-18, -4,-3,-18</MeshGeometry3D.Positions>
+                                                <MeshGeometry3D.TriangleIndices>2,1,0 0,3,2</MeshGeometry3D.TriangleIndices>
+                                                <MeshGeometry3D.TextureCoordinates>0,0 1,0 1,1 0,0</MeshGeometry3D.TextureCoordinates>
+                                            </MeshGeometry3D>
+                                        </Viewport2DVisual3D.Geometry>
+
+                                        <!--defining the material-->
+                                        <Viewport2DVisual3D.Material>
+                                            <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True" Brush="White"/>
+                                        </Viewport2DVisual3D.Material>
+
+                                        <!--defining the transformation-->
+                                        <Viewport2DVisual3D.Transform>
+                                            <RotateTransform3D CenterZ="-18">
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D Angle="45" Axis="0,1,0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                        </Viewport2DVisual3D.Transform>
+                                        <!--definig the rectangle-->
+                                        <Viewport2DVisual3D.Visual>
+                                            <Button Content=""/>
+                                        </Viewport2DVisual3D.Visual>
+                                    </Viewport2DVisual3D>
+                                </Viewport3D.Children>
+                            </Viewport3D>
+
+                        </Border>
+                        <!--This will change to a documents place instead of calendar-->
+                        <Image  Margin="113,53,123.282,60.053" Cursor="Hand" Source="calendar.png"  />
+                        
+                    </Grid>
+
+                    <!--search members-->
+                    <Grid Grid.Column="2" Grid.Row="2" Margin="0,0,0,0.001">
+                        <Border  Grid.Column="1" Grid.Row="1">
+                            <Viewport3D>
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0,0" LookDirection="0,0,-1" FieldOfView="35"/>
+                                </Viewport3D.Camera>
+
+                                <!--properties children-->
+                                <Viewport3D.Children>
+                                    <ModelVisual3D>
+                                        <ModelVisual3D.Content>
+                                            <DirectionalLight Color="#FFE8E8EC" Direction="0,0,-1"/>
+                                        </ModelVisual3D.Content>
+                                    </ModelVisual3D>
+
+                                    <!--definig the visual view-->
+                                    <Viewport2DVisual3D>
+                                        <Viewport2DVisual3D.Geometry>
+                                            <MeshGeometry3D>
+                                                <MeshGeometry3D.Positions>-4,3,-18 4,2,-18 4,-2,-18, -4,-3,-18</MeshGeometry3D.Positions>
+                                                <MeshGeometry3D.TriangleIndices>2,1,0 0,3,2</MeshGeometry3D.TriangleIndices>
+                                                <MeshGeometry3D.TextureCoordinates>0,0 1,0 1,1 0,0</MeshGeometry3D.TextureCoordinates>
+                                            </MeshGeometry3D>
+                                        </Viewport2DVisual3D.Geometry>
+
+                                        <!--defining the material-->
+                                        <Viewport2DVisual3D.Material>
+                                            <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True" Brush="White"/>
+                                        </Viewport2DVisual3D.Material>
+
+                                        <!--defining the transformation-->
+                                        <Viewport2DVisual3D.Transform>
+                                            <RotateTransform3D CenterZ="-18">
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D Angle="45" Axis="0,1,0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                        </Viewport2DVisual3D.Transform>
+                                        <!--definig the rectangle-->
+                                        <Viewport2DVisual3D.Visual>
+                                            <Button Content=""/>
+                                        </Viewport2DVisual3D.Visual>
+                                    </Viewport2DVisual3D>
+                                </Viewport3D.Children>
+                            </Viewport3D>
+
+                        </Border>
+                        <Image Source="internet_screen.png" Margin="109,48,120.155,60.053" Cursor="Hand"/>
+                    </Grid>
+                </Grid>
+
+                <StackPanel Grid.Column="1" Grid.Row="2">
+                    <Separator  Height="1" VerticalAlignment="Top" Margin="0,40,0,0" Background="#FF293955"/>
+                    <StackPanel Height="32" Margin="65.292,3" Orientation="Horizontal">
+                        <TextBlock Text="Search a Member" FontSize="20"  Foreground="#FF243042" />
+                        <TextBox Width="450" Margin="10,0" FontSize="20" VerticalContentAlignment="Center"/>
+                        <Button Margin="-10,0" Background="#FF364E6F">
+                            <Button.Content>
+                                <Image Source="17-128.png" Width="81"/>
+                            </Button.Content>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Frame.Content>
+    </Frame>
+</UserControl>

@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="fingerPrint_Manag.Views.AddMembersNextView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:fingerPrint_Manag.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="517" d:DesignWidth="1190"
+             VerticalAlignment="Center">
+    <Frame Name="AddMembersNextViewFrame">
+        <Frame.Content>
+
+            <Grid Height="517" VerticalAlignment="Top">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="230*"/>
+                    <ColumnDefinition Width="737*"/>
+                    <ColumnDefinition Width="230*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="502*"/>
+                    <RowDefinition Height="7*"/>
+
+                </Grid.RowDefinitions>
+                <Border Grid.Column="1" Grid.Row="1" Background="#000C102A" BorderBrush="#FF686868" BorderThickness="1,2,1,2" Margin="0,3,0,0" >
+                    <StackPanel >
+                        <TextBlock  Text="EMPLOYMENT DATA " Foreground="White" TextAlignment="Left" FontSize="20" Background="#FF293955" Padding="10,0"/>
+                        <Label Content="EMPLOYER'S NAME :" Background="Transparent" Foreground="Black" FontSize="15" HorizontalAlignment="Center" Margin="10,15,291,15" Width="428"/>
+                        <TextBox Height="25" Margin="10,-15,100,0"/>
+
+                        <Label Content="COMPANY'S NAME :" Background="Transparent" Foreground="Black" FontSize="15" HorizontalAlignment="Center" Margin="10,7,292,7" Width="427"/>
+                        <TextBox Height="25" Margin="10,-10,100,0"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,10">
+                            <Label Content="Adress :" Foreground="Black" Width="85"/>
+                            <TextBox Width="600" Margin="20,0" Background="Transparent" BorderBrush="Blue" BorderThickness="0,0,0,1"/>
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label  Content="Date Of Hire :" Foreground="Black"/>
+                            <DatePicker Width="179.64" Margin="20,0"/>
+                        </StackPanel>
+
+                        <TextBlock  Text="OFFICIAL USE " Foreground="White" TextAlignment="Left" FontSize="20" Background="#FF293955" Margin="0,10" Padding="10,0"/>
+                        <Label Content="OFFICIER'S NAME :" Background="Transparent" Foreground="Black" FontSize="15" HorizontalAlignment="Center" Margin="0,-10,297,-10" Width="432"/>
+                        <TextBox Height="25" Margin="10,10,100,0"/>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Registration Number Asssigned : " Foreground="Black" Margin="0,10"/>
+                            <TextBox Width="300" Height="30" Background="Transparent" BorderBrush="Black" BorderThickness="0,0,0,1" Margin="10,0" TextAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Function Asssigned : " Foreground="Black" Margin="0,10"/>
+                            <TextBox Width="300" Height="30" Background="Transparent" BorderBrush="Black" BorderThickness="0,0,0,1" Margin="10,0" TextAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Label Content="Date : " Foreground="Black" Margin="0,10"/>
+                            <DatePicker Width="182" Height="25" Background="Transparent"  Margin="10,0" />
+                        </StackPanel>
+
+                        <Button Content="Register" Margin="321,0,321,0" Height="30" Background="#FF364E6F" Foreground="White" />
+
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+        </Frame.Content>
+    </Frame>
+</UserControl>

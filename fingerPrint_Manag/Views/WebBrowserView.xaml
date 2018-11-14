@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="fingerPrint_Manag.Views.WebBrowserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:fingerPrint_Manag.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="517" d:DesignWidth="1190">
+    <Frame x:Name="WebBrowserFrame">
+        <Frame.Content>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="17*"/>
+                    <ColumnDefinition Width="95*"/>
+                    <ColumnDefinition Width="7*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35*"/>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="360*"/>
+                    <RowDefinition Height="42*"/>
+                </Grid.RowDefinitions>
+
+                
+                <!--FIRST ROW CONTENT DEFINITIONS-->
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button >
+                        <Image Source="icon_402-128.png" />
+                    </Button>
+                    <Button >
+                        <Image Source="icon_403-128.png" />
+                    </Button>
+                    <Button>
+                        <Image Source="010_x-128.png" />
+                    </Button>
+
+                    <Button >
+                        <Image Source="sync_synchronisation_recycle_refresh-128.png" />
+                        
+                    </Button>
+                </StackPanel>
+
+                <TextBox Grid.Column="1"/>
+                <Image Grid.Column="2" Source="06_menu_bullet_unjustified-2-128.png" />
+                
+                <!--SECOND ROW-->
+                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+                    
+                    <Image Source="eye_spy_search_look_eyeball-128.png" />
+                    <TextBox />
+
+                </StackPanel>
+   
+                <!--THIRSD ROW-->
+                <WebBrowser Grid.Column="1" Grid.Row="2" Margin="0,0,0,7.478"/>
+                
+                <!--LAST ROW-->
+                <Grid Grid.Column="0" Grid.ColumnSpan="3 " Grid.Row="3" Margin="20,0,20,10" Background="#FF293955" Height="43" VerticalAlignment="Bottom">
+                    <Border Width="500" CornerRadius="10" BorderThickness="1" BorderBrush="#FF5477A6">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF293955" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Horizontal" Margin="120,0">
+                            <Image Width="50" Source="house-128.png"/>
+                            <Image Width="50" Margin="20,0,0,0" Source="add_group-128.png"/>
+                            <Image Width="50" Margin="20,0,0,0"/>
+                            <Image Width="50" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Frame.Content>
+
+    </Frame>
+</UserControl>

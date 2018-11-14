@@ -1,0 +1,350 @@
+﻿<UserControl x:Class="fingerPrint_Manag.Views.ViewMembersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:fingerPrint_Manag.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="517" d:DesignWidth="1190">
+    <Frame x:Name="ViewMemebersFrame" NavigationUIVisibility="Hidden">
+        <Frame.Content>
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="284*"/>
+                    <ColumnDefinition Width="855*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="420*"/>
+                    <RowDefinition Height="57*"/>
+
+                </Grid.RowDefinitions>
+
+                <!--first row content definitions-->
+                <TextBlock Text="Members View" FontSize="30" Grid.ColumnSpan="4" Padding="50,0" Foreground="White" Background="#FF293955" Height="40" VerticalAlignment="Top" />
+
+                <!--the last row content definitions -->
+                <Grid Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Margin="20,0,0,10" Background="#FF293955" Height="43" VerticalAlignment="Bottom">
+                    <Border Width="500" CornerRadius="10" BorderThickness="1" BorderBrush="#FF5477A6">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF293955" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Horizontal" Margin="120,0">
+                            <Image Width="50" Source="house-128.png"/>
+                            <Image Width="50" Margin="20,0,0,0" Source="add_group-128.png"/>
+                            <Image Width="50" Margin="20,0,0,0" Source="Payday_Loan-128.png"/>
+                            <Image Width="50" Margin="20,0,0,0" Source="internet_screen.png"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+                <!-- second row / grid content definition-->
+                <DataGrid Grid.Column="1" Grid.Row="1" BorderBrush="#FF293955" FontSize="14">
+
+                    <!--data grid columns definitions-->
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="WORK ID." Width="100" CanUserReorder="False" CanUserResize="False">
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="White"/>
+                                    <Setter Property="Foreground" Value="#FF293955" />
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="FontWeight" Value="Normal"/>
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="BorderBrush" Value="White"/>
+                                    <Setter Property="BorderThickness" Value="1,1,0,0"/>
+
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+
+                        <DataGridTextColumn Header="NAME" Width="*" CanUserReorder="False" CanUserResize="False">
+                            <DataGridTextColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="#FF293955"/>
+                                    <Setter Property="Foreground" Value="White" />
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="FontWeight" Value="Normal"/>
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="BorderBrush" Value="White"/>
+                                    <Setter Property="BorderThickness" Value="1,1,0,0"/>
+
+                                </Style>
+                            </DataGridTextColumn.HeaderStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!--second row content definitions-->
+                <Border Grid.Column="2" Grid.Row="1" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="23*"/>
+                            <RowDefinition Height="61*"/>
+                        </Grid.RowDefinitions>
+
+
+                        <!--FIRST ROW DEFINITIONS-->
+                        <DockPanel>
+                            <Border Width="120" BorderBrush="#FF293955" BorderThickness="1" Margin="6,3,0,0">
+                                <Image/>
+                            </Border>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="3*"/>
+                                    <RowDefinition Height="3*"/>
+                                    <RowDefinition Height="3*"/>
+                                    <RowDefinition Height="3*"/>
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,0,0,0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Work ID.  :"  FontSize="15" VerticalAlignment="Center"/>
+                                        <TextBox x:Name="MVWorkIDtextbox"  Width="200" Margin="30,0,0,0" VerticalContentAlignment="Bottom" FontSize="15" Height="20" BorderBrush="#FF293955" BorderThickness="0,0,0,1" Background="Transparent"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="424.11">
+                                        <TextBlock Text="Gender :" Margin="215,0,0,0" FontSize="15" VerticalAlignment="Center"/>
+                                        <TextBox x:Name="MVGendertextbox" BorderThickness="0,0,0,1" Width="89.11" Margin="30,0,0,0" VerticalContentAlignment="Bottom" FontSize="15" Height="20" BorderBrush="#FF293955" Background="Transparent"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                    <TextBlock Text="Name :" FontSize="15" Margin="10,0" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="MVNametextbox" BorderThickness="0,0,0,1" Width="150" Margin="40,0,0,0" VerticalContentAlignment="Bottom" FontSize="15" Height="20" BorderBrush="#FF293955" Background="Transparent"/>
+
+
+
+                                    <TextBlock Text="Last Name :" Margin="50,0,0,0" FontSize="15" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="MVLastNametextbox" BorderThickness="0,0,0,1" Width="150" Margin="10,0,0,0" VerticalContentAlignment="Bottom" FontSize="15" Height="20" BorderBrush="#FF293955" Background="Transparent"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                    <TextBlock Text="Function :" FontSize="15" Margin="10,0" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="MVIFunctiontextbox"  Width="200" Margin="25,0,0,0" VerticalContentAlignment="Bottom" BorderThickness="0,0,0,1" FontSize="15" Height="20" BorderBrush="#FF293955" Background="Transparent"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Row="3" Orientation="Horizontal">
+                                    <TextBlock Text="Home Address :" FontSize="15" Margin="10,0" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="MVHomeAddresstextbox"  Width="570.197" Margin="30,0,0,0" VerticalContentAlignment="Bottom" BorderThickness="0,0,0,1" FontSize="15" Height="20" BorderBrush="#FF293955" Background="Transparent"/>
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+
+                        <!--the second part of the grid-->
+
+                        <Grid Grid.Row="1" Margin="20,20,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="7*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="9*"/>
+                                <RowDefinition Height="10*"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <TextBlock Text="Date Of Hire :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVDateOfHiretextbox" Width="200" Margin="10,0,10,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+
+                                <TextBlock Text="Valid ID. :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVValidIdtextbox" Width="200" Margin="10,0,10,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+
+                                <TextBlock Text="ID. Type :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVValidIdTypetextbox" Width="164.539" Margin="10,0,10,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <TextBlock Text="Country Of Issue :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVCountryOFIssuetextbox" Width="150" Margin="10,0,10,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+
+                                <TextBlock Text="Issue Date :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVIssueDatetextbox" Width="150" Margin="10,0,10,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+
+                                <TextBlock Text="Expiry Date :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVExpirytetextbox" Width="150" Margin="10,0,10,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                <TextBlock Text="Email Address :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVEmailAddresstextbox" Width="300" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+
+                                <TextBlock Text="Phone Number :" FontSize="15" VerticalAlignment="Bottom" Margin="10,0"/>
+                                <TextBox x:Name="MVPhoneNumbertextbox" Width="227.916" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                                <TextBlock Text="Country Of Birth :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVCountryOfBirthtextbox" Width="150" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                                <TextBlock Text="Date Of Birth :" Margin="10,0,0,0" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVDateOfBirthtextbox" Width="150" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                                <TextBlock Text="Occupation :" Margin="10,0,0,0" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVOccupationtextbox" Width="150" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                                <TextBlock Text="Marital Status :" Margin="0,0,0,0" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVMaritalStatustextbox" Width="150" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                                <TextBlock Text="Spouse's Names :" Margin="10,0,0,0" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVSpouseNametextbox" Width="251.543" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Orientation="Horizontal">
+                                <TextBlock Text="Spouse's Birth Date :" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVSpouseBirthDatetextbox" Width="150" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                                <TextBlock Text="Date Of Marriage :" Margin="10,0,0,0" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVDateOfMarriagetextbox" Width="150" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                                <TextBlock Text="Number Of Children :" Margin="10,0,0,0" FontSize="15" VerticalAlignment="Bottom"/>
+                                <TextBox x:Name="MVNumberOFChildrentextbox" Width="76.493" Margin="10,0,0,4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#003399FF" Height="25" VerticalAlignment="Bottom" FontSize="14">
+                                    <TextBox.Background>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF364E6F" Offset="0"/>
+                                            <GradientStop Color="White" Offset="0.996"/>
+                                            <GradientStop Color="#FF8B99AC" Offset="0.044"/>
+                                        </LinearGradientBrush>
+                                    </TextBox.Background>
+                                </TextBox>
+                            </StackPanel>
+                            <Border Grid.Row="6" BorderBrush="#FF364E6F" BorderThickness="0,0,0,1" CornerRadius="10"></Border>
+                            <Grid Grid.Row="7" Height="35.141" VerticalAlignment="Top" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="52*"/>
+                                    <ColumnDefinition Width="22*"/>
+                                    <ColumnDefinition Width="22*"/>
+                                    <ColumnDefinition Width="22*"/>
+                                    <ColumnDefinition Width="52*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Content="Update" FontSize="20" Margin="0,5,5,0" Grid.Column="1"  Style="{DynamicResource VMUpdateButton}"/>
+                                <Button Content="Delete" FontSize="20" Margin="0,5,5,0" Grid.Column="2" Style="{DynamicResource VMDeleteButton}" />
+                                <Button Content="Unfollow" FontSize="20" Margin="2.623,5,2.623,0" Grid.Column="3"  Style="{DynamicResource VMUnfollowButton}"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Frame.Content>
+    </Frame>
+</UserControl>
